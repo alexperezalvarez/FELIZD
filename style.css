@@ -15,6 +15,9 @@ h1 {
     padding-bottom: 50px;
     animation: glow 1s ease-in-out infinite alternate;
 }
+h2 {
+    color: #fff;
+}
 
 .teddy {
     position: relative;
