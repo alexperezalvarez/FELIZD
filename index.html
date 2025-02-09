@@ -8,24 +8,26 @@
     <title>Have a nice day</title>
     <style>
         .typing-effect {
-            display: inline-block;
+            display: block; /* Asegura que ocupe todo el ancho disponible */
             border-right: 2px solid;
-            white-space: nowrap;
             overflow: hidden;
             font-size: 20px;
             font-weight: bold;
             width: 0;
             animation: typing 4s steps(40, end) forwards, blink 0.75s step-end infinite;
-            color: white; /* Hace que el texto sea blanco */
+            color: white; /* Color de letra blanco */
             text-align: center;
             max-width: 90%;
             margin: auto;
+            word-wrap: break-word;
+            white-space: normal; /* Permite que el texto haga saltos de línea */
+            line-height: 1.5; /* Mejora la separación entre líneas */
         }
 
         /* Ajustes para pantallas pequeñas (como un iPhone) */
         @media screen and (max-width: 600px) {
             .typing-effect {
-                font-size: 16px; /* Reduce el tamaño en pantallas pequeñas */
+                font-size: 16px; /* Reduce el tamaño en celulares */
                 max-width: 95%;
             }
         }
