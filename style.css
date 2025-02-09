@@ -18,6 +18,23 @@ h1 {
 h2 {
     color: white;
 }
+p {
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    max-width: 90%;
+    margin: 10px auto;
+    line-height: 1.5;
+}
+
+/* Ajustes para pantallas pequeñas (como un iPhone) */
+@media screen and (max-width: 600px) {
+    p {
+        font-size: 16px; /* Reducimos un poco el tamaño del texto */
+        max-width: 95%;  /* Aseguramos que ocupe más espacio en pantallas pequeñas */
+    }
+}
+
 
 .teddy {
     position: relative;
