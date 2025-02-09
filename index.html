@@ -6,6 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css"/>
     <title>Have a nice day</title>
+    <style>
+        .typing-effect {
+            display: inline-block;
+            border-right: 2px solid;
+            white-space: nowrap;
+            overflow: hidden;
+            font-size: 20px;
+            font-weight: bold;
+            width: 0;
+            animation: typing 4s steps(40, end) forwards, blink 0.75s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+    </style>
 </head>
 <body>
     <h1>HAVE A NICE DAY</h1>
@@ -40,9 +61,25 @@
         <div class="left-leg">
             <div class="foot"></div>
         </div>
-        
     </div>
-    <h2>Eres la luz que ilumina los días y Eres un rayo de luz en la vida de quienes te rodean ¡Eres simplemente increíble! 💖</h2>
-    <script src="script.js"></script>
+    <h2>🎉✨ ¡Feliz cumpleaños, Mariana🦦! ✨🎉💖</h2>
+    
+    <p id="birthday-message" class="typing-effect"></p>
+    
+    <script>
+        const message = "Feliz cumpleaños, Mariana 🎉💖. Que este día esté lleno de amor, felicidad y hermosos momentos. Eres una persona increíble y mereces lo mejor del mundo.";
+        const messageElement = document.getElementById("birthday-message");
+        
+        let index = 0;
+        function typeMessage() {
+            if (index < message.length) {
+                messageElement.textContent += message.charAt(index);
+                index++;
+                setTimeout(typeMessage, 100);
+            }
+        }
+        
+        typeMessage();
+    </script>
 </body>
 </html>
